@@ -11,7 +11,7 @@ class DesignTable extends Component {
     render() {
 //        console.log('In DesignTable.render this=',this);
         return (
-            <>
+            <div className='design-table'>
                 <Row>
                     <NameValueUnitsTable />
                     <ConstraintsMinTable />
@@ -20,7 +20,7 @@ class DesignTable extends Component {
                 <Row>
                     <NameValueUnitsCalcInputTable />
                 </Row>
-            </>
+            </div>
         );
     }
 

@@ -24,17 +24,15 @@ if (process.env.NODE_ENV !== "production") { // Are we running on localhost as "
 //  console.log('In config process.env.REACT_APP_DESIGN_VIEW=', process.env.REACT_APP_DESIGN_VIEW);
 //  console.log('In config process.env.REACT_APP_SESSION_REFRESH=', process.env.REACT_APP_SESSION_REFRESH);
   node_env = process.env.REACT_APP_NODE_ENV || process.env.NODE_ENV;
-  issuer = process.env.REACT_APP_ISSUER || 'https://{yourOktaDomain}.com/oauth2/default';
-  clientId = process.env.REACT_APP_CLIENT_ID || '{clientId}';
-  env_types = process.env.REACT_APP_DESIGN_TYPES || '["Piston-Cylinder","Solid","Spring/Compression","Spring/Extension","Spring/Torsion"]';
-  env_types = JSON.parse(env_types);
+  env_types = '';
   env_type = process.env.REACT_APP_DESIGN_TYPE || 'Spring/Compression';
   env_name = process.env.REACT_APP_DESIGN_NAME || 'Startup';
   env_units = process.env.REACT_APP_DESIGN_UNITS || 'US';
   env_view = process.env.REACT_APP_DESIGN_VIEW || 'Advanced';
   session_refresh = process.env.REACT_APP_SESSION_REFRESH || 3600;
+  window.console.log = () => {}
 } else { // We are running on Heroku as "production"
-  const env = runtimeEnv(); // Load the env object.
+  const env = process.env// Load the env object.
 //  console.log('In config env.REACT_APP_NODE_ENV=', env.REACT_APP_NODE_ENV);
 //  console.log('In config env.REACT_APP_ISSUER=', env.REACT_APP_ISSUER);
 //  console.log('In config env.REACT_APP_CLIENT_ID=', env.REACT_APP_CLIENT_ID);
@@ -45,10 +43,7 @@ if (process.env.NODE_ENV !== "production") { // Are we running on localhost as "
 //  console.log('In config env.REACT_APP_DESIGN_VIEW=', env.REACT_APP_DESIGN_VIEW);
 //  console.log('In config env.REACT_APP_SESSION_REFRESH=', env.REACT_APP_SESSION_REFRESH);
   node_env = env.REACT_APP_NODE_ENV || env.NODE_ENV;
-  issuer = env.REACT_APP_ISSUER || 'https://{yourOktaDomain}.com/oauth2/default';
-  clientId = env.REACT_APP_CLIENT_ID || '{clientId}';
-  env_types =  env.REACT_APP_DESIGN_XXXX || '["Piston-Cylinder","Solid","Spring/Compression","Spring/Extension","Spring/Torsion"]';
-  env_types = JSON.parse(env_types);
+  env_types = '';
   env_type = env.REACT_APP_DESIGN_TYPE || 'Spring/Compression';
   env_name = env.REACT_APP_DESIGN_NAME || 'Startup';
   env_units = env.REACT_APP_DESIGN_UNITS || 'US';

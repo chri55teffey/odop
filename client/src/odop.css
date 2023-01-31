@@ -20,5 +20,13 @@ input[type=number] {
     align-items: center;
     display: flex;
     height: 10px;
+}
 
+.design-table table tr:first-child th {
+    background: #1d1d21 !important;
+    color: #ffbf00 !important;
+}
+
+.design-table input, .design-table select, .design-table .input-group-append, .design-table .input-group-prepend {
+    border: 1px solid black;
 }

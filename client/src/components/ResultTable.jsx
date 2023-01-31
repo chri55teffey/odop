@@ -147,7 +147,7 @@ class ResultTable extends Component {
 
         return (
             <>
-                <Table className="col-md-8" size="sm">
+                <Table  className="col-md-8" size="sm">
                     <tbody>
                         <tr>
                             <th width="33%" id="Feasibility">
@@ -167,7 +167,7 @@ class ResultTable extends Component {
                        </tr>
                     </tbody>
                 </Table>
-                <Table className="col-md-4" size="sm">
+                <Table className="col-md-4" size="sm" >
                     <tbody>
                         <tr>
                             <td className="text-center" id="ObjectiveValue">

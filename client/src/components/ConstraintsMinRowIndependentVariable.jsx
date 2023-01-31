@@ -141,13 +141,16 @@ class ConstraintMinRowIndependentVariable extends Component {
         </td>
         <td className="align-middle" colSpan="2">
           <InputGroup>
-            <InputGroup.Text>
-              <Form.Check className='form-check' type="checkbox" aria-label="Checkbox for minimum value"
-                          checked={this.props.element.lmin & CONSTRAINED}
-                          onChange={this.props.element.lmin & CONSTRAINED
-                            ? this.onResetFlagMinConstrained
-                            : this.onSetFlagMinConstrained} disabled={this.props.element.lmin & FIXED ? true : false}/>
-            </InputGroup.Text>
+            <div className='input-group-prepend'>
+              <InputGroup.Text>
+                <Form.Check className='form-check' type="checkbox" aria-label="Checkbox for minimum value"
+                            checked={this.props.element.lmin & CONSTRAINED}
+                            onChange={this.props.element.lmin & CONSTRAINED
+                              ? this.onResetFlagMinConstrained
+                              : this.onSetFlagMinConstrained}
+                            disabled={this.props.element.lmin & FIXED ? true : false}/>
+              </InputGroup.Text>
+            </div>
             <FormControlTypeNumber id={this.props.element.name + '_cmin'} icon_alerts={icon_alerts}
                                    className={className} value={this.props.element.cmin}
                                    validmin={this.props.element.validmin} validmax={this.props.element.validmax}
