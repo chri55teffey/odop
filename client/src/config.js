@@ -28,7 +28,7 @@ if (process.env.NODE_ENV !== "production") { // Are we running on localhost as "
   env_type = process.env.REACT_APP_DESIGN_TYPE || 'Spring/Compression';
   env_name = process.env.REACT_APP_DESIGN_NAME || 'Startup';
   env_units = process.env.REACT_APP_DESIGN_UNITS || 'US';
-  env_view = process.env.REACT_APP_DESIGN_VIEW || 'Advanced';
+  env_view = process.env.REACT_APP_DESIGN_VIEW || 'Calculator';
   session_refresh = process.env.REACT_APP_SESSION_REFRESH || 3600;
   window.console.log = () => {}
 } else { // We are running on Heroku as "production"
@@ -47,7 +47,7 @@ if (process.env.NODE_ENV !== "production") { // Are we running on localhost as "
   env_type = env.REACT_APP_DESIGN_TYPE || 'Spring/Compression';
   env_name = env.REACT_APP_DESIGN_NAME || 'Startup';
   env_units = env.REACT_APP_DESIGN_UNITS || 'US';
-  env_view = env.REACT_APP_DESIGN_VIEW || 'Advanced';
+  env_view = env.REACT_APP_DESIGN_VIEW || 'Calculator';
   session_refresh = env.REACT_APP_SESSION_REFRESH || 3600;
 }
 

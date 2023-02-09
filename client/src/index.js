@@ -43,7 +43,7 @@ const middleware = composeEnhancers(applyMiddleware(/* loggerMiddleware, */dispa
 const store = createStore(reducers, {
     user: null,
     name: config.url.name,
-    view: 'Advanced',
+    view: 'Calculator',
     model: {
         type: 'Spring/Compression',
         result: {

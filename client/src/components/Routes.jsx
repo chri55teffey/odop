@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { Button, Modal, Alert } from 'react-bootstrap';
 import { Routes as BrowserRoutes, Route } from 'react-router-dom';
-import { Security, LoginCallback } from '@okta/okta-react';
+import {  LoginCallback } from '@okta/okta-react';
 import config from '../config';
 import MainPage from './MainPage';
 import SignInPage from './SignInPage';
-import { OktaAuth } from '@okta/okta-auth-js'
 import { connect } from 'react-redux';
 import { load, loadInitialState, restoreAutoSave, deleteAutoSave, changeName } from '../store/actionCreators';
 import { logUsage } from '../logUsage';
@@ -190,7 +189,7 @@ class Routes extends Component {
 const mapStateToProps = state => ({
     user: state.user,
     name: state.name,
-    view: state.view,
+    view: 'Calculator',
     type: 'Spring/Compression',
 });
 
